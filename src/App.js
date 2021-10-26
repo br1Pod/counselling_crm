@@ -1,5 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import DashboardContainer from './containers/DashboardContainer'
+import DiaryContainer from './containers/DiaryContainer'
+import ClientsContainer from './containers/ClientsContainer'
+import ContactsContainer from './containers/ContactsContainer'
+import DocumentsContainer from './containers/DocumentsContainer'
+import AccountsContainer from './containers/AccountsContainer'
+import Layout from './components/Layout';
 import './App.css';
 
 function App() {
@@ -10,33 +17,33 @@ function App() {
           <Switch>
 
             <Route path="/" exact>
-              <Dashboard />
+              <DashboardContainer />
             </Route>
 
             <Route path="/diary" exact>
-              <Diary />
+              <DiaryContainer />
             </Route>
 
             <Route path="/clients" exact>
-              <Clients />
+              <ClientsContainer />
             </Route>
 
             <Route path="/contacts" exact>
-              <Contacts />
+              <ContactsContainer />
             </Route>
 
             <Route path="/docs" exact>
-              <Documents />
+              <DocumentsContainer />
             </Route>
 
             <Route path="/accounts" exact>
-              <Accounts />
+              <AccountsContainer />
             </Route>
 
           </Switch>
         </Layout>
       </Router>
-    <>
+    </>
   );
 }
 
