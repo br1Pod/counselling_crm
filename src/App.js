@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import DashboardContainer from './containers/DashboardContainer'
 import DiaryContainer from './containers/DiaryContainer'
 import ClientsContainer from './containers/ClientsContainer'

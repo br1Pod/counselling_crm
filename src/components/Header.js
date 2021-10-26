@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import '../css/main.css'
 
@@ -9,16 +9,37 @@ const Header = () => {
         
         <header>
             <div id= "branding">
-                <h1><a href = "/" title="Go to Dashboard">ConnectCounselling CRM</a></h1>
+                <h1 title="View Dashboard">
+                    <Link to = "/"> ConnectCounselling CRM </Link>
+                </h1>
             </div>    
             <nav>
                 <ul id="primary_nav">
-                    <li><a href = "/" title="View Dashboard">Dashboard</a></li>
-                    <li><a href = "/diary" title="View Diary">Diary</a></li>
-                    <li><a href = "/clients" title="View Clients">Clients</a></li>
-                    <li><a href = "/contacts" title="View Contacts">Contacts</a></li>
-                    <li><a href = "/docs" title="View Documents">Documents</a></li>
-                    <li><a href = "/accounts" title="View Accounts">Accounts</a></li>
+                     
+                    <li title="View Dashboard">
+                        <Link to = "/">Dashboard</Link>
+                    </li>
+                    
+                    <li title="View Diary">
+                        <Link to = "/diary">Diary</Link>
+                    </li>
+                    
+                    <li title="View Clients">
+                        <Link to = "/clients">Clients</Link>
+                    </li>        
+                     
+                    <li title="View Contacts">
+                        <Link to = "/contacts">Contacts</Link>
+                    </li>                    
+                         
+                    <li title="View Documents">
+                        <Link to = "/docs">Documents</Link>
+                    </li>                    
+                        
+                    <li title="View Accounts">
+                        <Link to = "/accounts">Accounts</Link>
+                    </li>
+                    
                 </ul>
             </nav>
             

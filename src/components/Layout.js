@@ -6,9 +6,11 @@ import '../css/layout.css'
 const Layout = ({ children }) => {
     return (
         <div id='layout'>
-
-            <div id='content'>
-                {children}
+            <Header/>
+            <div id="main_body" className="cornered">
+                <div id='content'>
+                    {children}
+                </div>
             </div>
         </div>
     )
