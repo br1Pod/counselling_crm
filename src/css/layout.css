@@ -1,9 +1,49 @@
 html {
     margin: 0;
     padding: 0;
+    background-color: beige;
 }
 
 body {
-    background-color: beige;
-    
+    width: 90%;
+    margin: 20px auto;
+    border: 3px solid #555;
+    padding: 20px;
+    background: cadetblue;
+    border-radius: 15px;
+    color: black;
+    font-family: sans-serif;
 }
+
+header #branding{
+    border-bottom: 1px solid #333;
+}
+
+header #branding h1 a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul#primary_nav{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+ul#primary_nav li{
+    padding: 10px;
+}
+
+ul#primary_nav li:hover,
+ul#primary_nav li:active{
+    background-color:beige;
+}
+
+ul#primary_nav li a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
