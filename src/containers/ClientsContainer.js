@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import AddClientForm from '../components/forms/AddClientForm'
 import '../css/main.css'
 
 const ClientsContainer = () => {
@@ -9,6 +10,12 @@ const ClientsContainer = () => {
 
             <div id="clients">
                 <p>Here are the clients</p>
+
+                <br />
+                <br />
+                <h3>Add New Client</h3>
+                <AddClientForm />
+
             </div>
 
         </>
