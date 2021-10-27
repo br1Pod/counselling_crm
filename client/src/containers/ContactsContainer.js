@@ -14,7 +14,7 @@ const ContactsContainer = () => {
 
                 <br />
                 <br />
-                <h3>Add New Contact</h3>
+                
                 <AddContactForm />
 
             </div>
