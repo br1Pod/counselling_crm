@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import AddClientForm from '../components/forms/AddClientForm'
-import '../css/main.css'
+import '../css/form.css'
 
 const ClientsContainer = () => {
 

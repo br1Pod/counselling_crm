@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import AddContactForm from '../components/forms/AddContactForm'
-import '../css/main.css'
+import '../css/form.css'
+
 
 const ContactsContainer = () => {
 

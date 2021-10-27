@@ -1,0 +1,21 @@
+/* form styles */
+
+form {
+    margin: 50px;
+    padding:30px;
+    border: 1px solid #333;
+    display: flex;
+    flex-flow: column;
+}
+
+form fieldset {
+    display: flex;
+    flex-flow: column;
+    margin-bottom: 50px;
+}
+
+form input, textarea, select{
+    margin-bottom: 20px;
+    padding: 6px;
+}
+
