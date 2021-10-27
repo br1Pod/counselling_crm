@@ -40,6 +40,21 @@ const AddClient = ({addClient}) => {
             </fieldset>
 
             <fieldset>
+                <legend>Emergency Contact</legend>
+                <label htmlFor='emergency-name'>Emergency Contact Name</label>   
+                <input id='emergency-name' name="emergency-name" type="text" placeholder="Emergency Name" />
+
+                <label htmlFor='emergency-phone'>Emergency Contact Phone</label>   
+                <input id='emergency-phone' name="emergency-phone" type="text" placeholder="Emergency Phone Number" />
+
+                <label htmlFor='emergency-aware'>Does this Contact know about Sessions?</label>
+                <span>
+                <input className='radio-fix' type="radio" name="emergency-unaware" value='no' defaultChecked />No
+                <input className='radio-fix' type="radio" name="emergency-aware" value='yes' />Yes<br/>
+                </span>
+            </fieldset>
+
+            <fieldset>
                 <legend>Therapy Details</legend>
                 <label htmlFor='wew-score'>WEW Score</label>   
                 <input id='wew-score' name="wew-score" type="text" placeholder="WEW Score" />
@@ -50,10 +65,10 @@ const AddClient = ({addClient}) => {
                 <label htmlFor='completed-sessions'>Number of Sessions Completed</label>   
                 <input id='completed-sessions' name="completed-sessions" type="number" placeholder="Total Number of Sessions Completed" />
 
-                <label htmlFor='case-closed'>Completed Therapy?</label>
+                <label htmlFor='radio-fix'>Completed Therapy?</label>
                 <span>
-                <input className='case-closed' type="radio" name="radio" value='no' defaultChecked />No
-                <input className='case-closed' type="radio" name="radio" value='yes' />Yes<br/>
+                <input className='radio-fix' type="radio" name="sessions-incomplete" value='no' defaultChecked />No
+                <input className='radio-fix' type="radio" name="sessions-complete" value='yes' />Yes<br/>
                 </span>
 
                 <label htmlFor='hourly-rate'>Which Hourly Rate</label>   
