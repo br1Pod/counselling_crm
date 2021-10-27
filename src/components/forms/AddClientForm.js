@@ -52,7 +52,7 @@ const AddClient = ({addClient}) => {
 
                 <label htmlFor='case-closed'>Completed Therapy?</label>
                 <span>
-                <input className='case-closed' type="radio" name="radio" value='no' checked />No
+                <input className='case-closed' type="radio" name="radio" value='no' defaultChecked />No
                 <input className='case-closed' type="radio" name="radio" value='yes' />Yes<br/>
                 </span>
 
@@ -63,7 +63,7 @@ const AddClient = ({addClient}) => {
                     <option value='concession'>Concession</option>
                 </select>
 
-                
+
 
                 <label htmlFor='client-type'>Type of Client</label>   
                 <select id='client-type' name="client-type">
