@@ -17,9 +17,11 @@ const AddClient = ({addClient}) => {
 
     return (
         <div>
-
-            <form className='form' onSubmit={onSubmit} id="add-client-form">  
+            
+            <form className='form' onSubmit={onSubmit} id="add-client-form">
+            <h3>Add New Client Form</h3>  
             <fieldset>
+                <legend>Contact Details</legend>
                 <label htmlFor='first-name'>First Name</label>   
                 <input id='first-name' name="first-name" type="text" placeholder="First Name" />
 
@@ -38,7 +40,7 @@ const AddClient = ({addClient}) => {
             </fieldset>
 
             <fieldset>
-
+                <legend>Therapy Details</legend>
                 <label htmlFor='wew-score'>WEW Score</label>   
                 <input id='wew-score' name="wew-score" type="text" placeholder="WEW Score" />
 
@@ -61,6 +63,8 @@ const AddClient = ({addClient}) => {
                     <option value='concession'>Concession</option>
                 </select>
 
+                
+
                 <label htmlFor='client-type'>Type of Client</label>   
                 <select id='client-type' name="client-type">
                     <option value='private'>Private Practice</option>
@@ -68,7 +72,7 @@ const AddClient = ({addClient}) => {
                     <option value='eap'>EAP</option>
                 </select>
 
-                <input id="namesubmit" type="submit" value="Save Details"></input>
+                <input id="add-client-submit" type="submit" value="Save Details"></input>
                 
             </fieldset>
 

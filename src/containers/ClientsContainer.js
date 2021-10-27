@@ -13,7 +13,7 @@ const ClientsContainer = () => {
 
                 <br />
                 <br />
-                <h3>Add New Client</h3>
+                
                 <AddClientForm />
 
             </div>
