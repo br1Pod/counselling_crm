@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EmbeddedCalendar from '../components/EmbeddedCalendar';
 import '../css/main.css'
 
 const DiaryContainer = () => {
@@ -8,7 +9,13 @@ const DiaryContainer = () => {
         <>
 
             <div id="diary">
+
                 <p>Here is the diary</p>
+
+                <EmbeddedCalendar />
+
+                <p>google calendar</p>
+
             </div>
 
         </>
