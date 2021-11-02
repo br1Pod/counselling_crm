@@ -4,6 +4,13 @@ import '../css/form.css'
 
 const ClientsContainer = () => {
 
+    const[clients, setClients] = useState([]);
+
+    const addClient = (client) =>{
+        const temp = clients.map(s =>s);
+        temp.push(client);
+        setClients(temp);
+      }
 
     return (
         <>
@@ -14,7 +21,7 @@ const ClientsContainer = () => {
                 <br />
                 <br />
                 
-                <AddClientForm />
+                <AddClientForm addClient = {addClient}/>
 
             </div>
 
