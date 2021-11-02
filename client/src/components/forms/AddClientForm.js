@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { postClient } from "./AddClientService";
 
 
-const AddClient = ({addClient}) => {
+const AddClientForm = ({addClient}) => {
 
     const [clientFormData, setClientFormData] = useState({})
 
@@ -12,7 +13,9 @@ const AddClient = ({addClient}) => {
 
     const onSubmit = event => {
         event.preventDefault();
-        
+        postClient(formData).then((data)=>{
+            addClient(data);
+        })
     }
 
 
@@ -96,4 +99,4 @@ const AddClient = ({addClient}) => {
   )
 }
 
-export default AddClient;
+export default AddClientForm;
