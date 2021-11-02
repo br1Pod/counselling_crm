@@ -37,6 +37,8 @@ const AddContact = ({addContact}) => {
                     <label htmlFor='address'>Address</label> 
                     <textarea name="address" placeholder="Address"></textarea>
 
+                    
+
                     <input id="add-contact-submit" type="submit" value="Save"></input>
                 </fieldset>
             </form>
