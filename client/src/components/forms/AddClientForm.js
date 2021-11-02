@@ -13,7 +13,7 @@ const AddClientForm = ({addClient}) => {
 
     const onSubmit = event => {
         event.preventDefault();
-        postClient(formData).then((data)=>{
+        postClient(clientFormData).then((data)=>{
             addClient(data);
         })
     }
