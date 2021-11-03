@@ -29,6 +29,7 @@ const ClientsContainer = ({getClients}) => {
         temp.splice(indexToDel, 1);
         setClients(temp);
       }
+      
 
     return (
         <>
@@ -40,7 +41,7 @@ const ClientsContainer = ({getClients}) => {
                 <AddClientForm addClient = {addClient}/>
                 <br />
 
-                <ClientsList clients={clients} removeClient={removeClient} updateClient={updateClient} />
+                <ClientsList getClients={getClients} removeClient={removeClient} updateClient={updateClient} />
 
             </div>
 

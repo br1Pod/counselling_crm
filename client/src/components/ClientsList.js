@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ClientItem from "./ClientItem";
 
-const ClientsList = ({clients, removeClient, updateClient}) => {
+const ClientsList = ({getClients, removeClient, updateClient}) => {
+
+    const [clients, setClients] = useState([]);
+    
+    useEffect(()=>{
+        getClients()
+        .then((allClients)=>{
+          setClients(allClients);
+        })
+      },[]);
+
     const clientsLayout = clients.map((client) =>{
+        
         return <ClientItem 
         client={client} 
         key={client._id} 

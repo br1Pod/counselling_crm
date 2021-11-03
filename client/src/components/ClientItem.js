@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { deleteClient, updateClient } from "./forms/AddClientService"
 
 const ClientItem = ({client, removeClient}) => {
@@ -14,7 +15,6 @@ const ClientItem = ({client, removeClient}) => {
             updateClient(client._id)
         })
     }
-
 
     return (
         <>

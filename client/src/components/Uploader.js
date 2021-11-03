@@ -39,7 +39,7 @@ const Uploader = () => {
             onChange={onChange} />
             
             <div>
-                <p>File: {fileToUpload.name}</p>
+                <p>File: {fileToUpload}</p>
             </div>
             
             <div>
