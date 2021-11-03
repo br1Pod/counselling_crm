@@ -11,7 +11,7 @@ const AddClientForm = ({addClient}) => {
         setClientFormData(clientFormData);
     }
 
-    const onSubmit = event => {
+    const onSubmit = (event) => {
         event.preventDefault();
         postClient(clientFormData).then((data)=>{
             addClient(data);
@@ -22,7 +22,7 @@ const AddClientForm = ({addClient}) => {
     return (
         <div>
             
-            <form className='form' onSubmit={onSubmit} id="add-client-form">
+            <form className='form' onSubmit={onSubmit} id="add-client-form" method="post">
             <h3>Add New Client Form</h3>  
             <fieldset>
                 <legend>Contact Details</legend>
@@ -89,7 +89,7 @@ const AddClientForm = ({addClient}) => {
                     <option value='eap'>EAP</option>
                 </select>
 
-                <input type="submit" id="add-client-submit" value="Save Details"></input>
+                <input type="submit" id="add-client-submit" value="Save Details"/>
                 
             </fieldset>
 

@@ -1,4 +1,4 @@
-import { deleteClient } from "./forms/AddClientService"
+import { deleteClient, updateClient } from "./forms/AddClientService"
 
 const ClientItem = ({client, removeClient}) => {
 
@@ -8,11 +8,21 @@ const ClientItem = ({client, removeClient}) => {
             removeClient(client._id);
         })
     }
+
+    const handleChange = () => {
+        updateClient(client._id).then((id)=>{
+            updateClient(client._id)
+        })
+    }
+
+
     return (
         <>
-            <h1>Name: {client.first_name} {client.last_name}</h1>
-            <button onClick={handleDelete}>x</button>
-            
+                   
+            <li>
+                <em>Name: </em> {client.first_name} {client.last_name} | <em>Edit: </em><button onClick={handleChange}>edit</button> | <em>Delete: </em><button onClick={handleDelete}>x</button>
+            </li>       
+
             <hr></hr>
         </>
     )

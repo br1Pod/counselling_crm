@@ -7,6 +7,7 @@ import ContactsContainer from './containers/ContactsContainer'
 import DocumentsContainer from './containers/DocumentsContainer'
 import AccountsContainer from './containers/AccountsContainer'
 import Layout from './components/Layout';
+import {getClients, deleteClient, updateClient} from './components/forms/AddClientService';
 import './App.css';
 
 function App() {
@@ -25,7 +26,11 @@ function App() {
             </Route>
 
             <Route path="/clients" exact>
-              <ClientsContainer />
+              <ClientsContainer 
+              getClients ={getClients}
+              deleteClient ={deleteClient}
+              updateClient ={updateClient}
+              />
             </Route>
 
             <Route path="/contacts" exact>
