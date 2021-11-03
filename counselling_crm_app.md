@@ -15,11 +15,10 @@ With an app installed on their machine, they would be able to work without the h
 
 The user needs to:
 
-* View upcoming sessions in a calendar view, book new sessions, and view details of previous sessions.
+* View upcoming sessions in a calendar view
 * View, Create and Edit client records, including adding Case Notes to the client's record
 * View, Create and Edit other contact information (eg Venues, Organisations etc)
-* See an overview of the business accounts - outstanding invoices, upcoming payments, monthly and yearly running totals.
-* Be able to upload files and documents, and share those documents with clients or contacts via email
+* Be able to upload files and documents, then be able to download them to share with clients or contacts via email
 * As much as possible, the app needs to be accessible for a user with dyslexia - Fonts and colours need to be appropriate, actions should be shortened to the minimum amount of clicks, and there should be little or no requirement for remembering lots of passwords
 
 ## Extensions
@@ -36,7 +35,6 @@ Further functionality could include:
 * Install and run the app from a cloud service (such as AWS)
 
 ## Technologies
-
 
 1. Front End built with HTML, CSS and Javascript
 2. React

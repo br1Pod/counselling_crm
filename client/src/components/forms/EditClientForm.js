@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { postClient } from "./AddClientService";
+import { updateClient } from "./AddClientService";
 
 
-const AddClientForm = ({addClient}) => {
+
+const EditClientForm = ({updateClient}) => {
 
     const [clientFormData, setClientFormData] = useState({})
 
@@ -13,21 +14,21 @@ const AddClientForm = ({addClient}) => {
 
     const onSubmit = (event) => {
         event.preventDefault();
-        postClient(clientFormData).then((data)=>{
-            addClient(clientFormData);
+        updateClient(clientFormData)
+        .then((data)=>{
+            updateClient(clientFormData);
         })
     }
 
 
     return (
-        <div>
-            
-            <form className='form' onSubmit={onSubmit} id="add-client-form" method="post">
-            <h3>Add New Client Form</h3>  
+    
+        <form className='form' onSubmit={onSubmit} id="edit-client-form" method="put">
+            <h3>Edit Client</h3>  
             <fieldset>
                 <legend>Contact Details</legend>
                 <label htmlFor='first_name'>First Name</label>   
-                <input onChange={onChange} id='first_name' name="first_name" type="text" placeholder="First Name" />
+                <input onChange={onChange} id='first_name' name="first_name" type="text" placeholder="first_name" />
 
                 <label htmlFor='last_name'>Last Name</label>   
                 <input onChange={onChange} id='last_name' name="last_name" type="text" placeholder="Last Name" />
@@ -53,12 +54,8 @@ const AddClientForm = ({addClient}) => {
 
                 <label htmlFor='emergency_aware'>Does this Contact know about Sessions?</label>
                 <span>
-                <input onChange={onChange} className='radio-fix' type="radio" value='no' />
-                <label for="emergency_unaware">No</label>
-                <input onChange={onChange} className='radio-fix' type="radio" value='yes' />
-                <label for="emergency_aware">Yes</label>
-
-                <br/>
+                <input onChange={onChange} className='radio-fix' type="radio" value='no' defaultChecked />No
+                <input onChange={onChange} className='radio-fix' type="radio" value='yes' />Yes<br/>
                 </span>
             </fieldset>
 
@@ -75,12 +72,8 @@ const AddClientForm = ({addClient}) => {
 
                 <label htmlFor='finished'>Completed Therapy?</label>
                 <span>
-                <input onChange={onChange} className='radio-fix' type="radio" value='no' />
-                <label for="sessions_ongoing">No</label>
-                <input onChange={onChange} className='radio-fix' type="radio" value='yes' />
-                <label for="sessions_complete">Yes</label>
-
-                <br/>
+                <input onChange={onChange}className='radio-fix' type="radio" value='no' defaultChecked />No
+                <input onChange={onChange} className='radio-fix' type="radio" value='yes' />Yes<br/>
                 </span>
 
                 <label htmlFor='hourly_rate'>Which Hourly Rate</label>   
@@ -97,14 +90,12 @@ const AddClientForm = ({addClient}) => {
                     <option value='eap'>EAP</option>
                 </select>
 
-                <input type="submit" id="add-client-submit" value="Save Details"/>
+                <input type="submit" id="edit-client-submit" value="Save Changes"/>
                 
             </fieldset>
-
             </form>
 
-        </div>
-  )
+    )
 }
 
-export default AddClientForm;
+export default EditClientForm;

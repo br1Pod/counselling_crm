@@ -24,6 +24,7 @@ export const updateClient = (payload) => {
     .then(res => res.json())
 }
 
+
 export const deleteClient = (id) => {
     return fetch(baseURL + id, {
         method: 'DELETE'

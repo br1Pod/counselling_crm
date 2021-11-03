@@ -4,9 +4,12 @@ import ClientsList from "../components/ClientsList";
 import { getClients } from "../components/forms/AddClientService";
 import '../css/form.css'
 import { updateClient } from '../components/forms/AddClientService';
+import EditClientForm from '../components/forms/EditClientForm'
 
 const ClientsContainer = ({getClients}) => {
 
+    const[addVisible, setAddVisible] = useState(false);
+    const[listVisible, setListVisible] = useState(false);
     const[clients, setClients] = useState([]);
 
     useEffect(()=>{
@@ -30,22 +33,32 @@ const ClientsContainer = ({getClients}) => {
         temp.splice(indexToDel, 1);
         setClients(temp);
       }
-      
+        
+      const selectView = () => {
+        setAddVisible(false);
+        setListVisible(true);
+      }
 
+      const selectNew = () => {
+        setAddVisible(true);
+        setListVisible(false);
+      }
+ 
     return (
         <>
-
             <div id="clients">
-                <p>Here are the clients</p>
 
-                <br />
-                <AddClientForm addClient = {addClient}/>
-                <br />
+                <div id="client_option">
+                <button onClick={selectView}>View Client Record</button>
+                <button onClick={selectNew}>Add New Client</button>
+                </div>
 
-                <ClientsList clients={clients} removeClient={removeClient} updateClient={updateClient} />
-
+                <div>
+                {listVisible ? <ClientsList clients={clients} removeClient={removeClient}  /> : null}
+                {addVisible ? <AddClientForm addClient = {addClient}/> : null}
+                </div>
+                
             </div>
-
         </>
     )
 }
