@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { deleteClient, updateClient } from "./forms/AddClientService"
 
 const ClientItem = ({client, removeClient}) => {
+    const [clients, setClients] = useState([]);
 
-    console.log(client);
+    console.log(`this is the ` + client);
+
     const handleDelete = () => {
         deleteClient(client._id).then(()=>{
             removeClient(client._id);
@@ -18,12 +20,12 @@ const ClientItem = ({client, removeClient}) => {
 
     return (
         <>
-                   
-            <li>
-                <em>Name: </em> {client.first_name} {client.last_name} | <em>Edit: </em><button onClick={handleChange}>edit</button> | <em>Delete: </em><button onClick={handleDelete}>x</button>
-            </li>       
-
-            <hr></hr>
+        <li>
+            <em>Name: </em> {client.first_name} {client.last_name} | 
+            <em>Edit: </em><button onClick={handleChange}>edit</button> | 
+            <em>Delete: </em><button onClick={handleDelete}>x</button>
+        </li>       
+        <hr></hr>
         </>
     )
 }

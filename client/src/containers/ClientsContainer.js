@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AddClientForm from '../components/forms/AddClientForm'
 import ClientsList from "../components/ClientsList";
-
+import { getClients } from "../components/forms/AddClientService";
 import '../css/form.css'
 import { updateClient } from '../components/forms/AddClientService';
 
@@ -16,16 +16,17 @@ const ClientsContainer = ({getClients}) => {
         })
       },[]);
 
-    const addClient = (client) =>{
-        const temp = clients.map(client => client);
+      const addClient = (client) =>{
+        const temp = clients.map(s =>s);
         temp.push(client);
-        setClients(client);
+        setClients(temp);
       }
 
       const removeClient = (id) => {
-        const temp = clients.map(client => client);
-        const indexToDel = temp.map(client => client._id).indexOf(id);
+        const temp = clients.map(s =>s);
+        const indexToDel = temp.map(s => s._id).indexOf(id);
         console.log(indexToDel);
+
         temp.splice(indexToDel, 1);
         setClients(temp);
       }
@@ -41,7 +42,7 @@ const ClientsContainer = ({getClients}) => {
                 <AddClientForm addClient = {addClient}/>
                 <br />
 
-                <ClientsList getClients={getClients} removeClient={removeClient} updateClient={updateClient} />
+                <ClientsList clients={clients} removeClient={removeClient} updateClient={updateClient} />
 
             </div>
 

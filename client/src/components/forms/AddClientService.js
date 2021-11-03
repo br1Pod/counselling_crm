@@ -12,6 +12,7 @@ export const postClient = (payload) => {
         headers: { 'Content-Type': 'application/json' }
     })
     .then(res => res.json())
+    
 }
 
 export const updateClient = (payload) => {
