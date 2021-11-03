@@ -5,6 +5,31 @@ const Uploader = () => {
 
     const [fileToUpload, setFileToUpload] = useState();
 
+    const onChange = (event) => {
+		setFileToUpload(event.target.files[0]);
+	};
+
+    const onSubmit = (event) => {
+        event.preventDefault();
+		const formData = new FormData();
+		formData.append('File', fileToUpload);
+
+		fetch(
+			'http://localhost:3000/assets/docs/uploads/',
+			{
+				method: 'POST',
+				body: formData,
+			}
+		)
+        .then(response => response.json())
+        .then(result => {
+          console.log('Success:', result);
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+
+	};
 
     return (
         <>
