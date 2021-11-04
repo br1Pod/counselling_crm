@@ -9,7 +9,9 @@ const ClientsList = ({clients, removeClient}) => {
 
     return (
         <>
-            {clientList}
+            <ul id="people">
+                {clientList}
+            </ul>
         </>
     );
 

@@ -97,7 +97,7 @@ const AddClientForm = ({addClient}) => {
                     <option value='eap'>EAP</option>
                 </select>
 
-                <input type="submit" id="add-client-submit" value="Save Details"/>
+                <input type="submit" id="add-client-submit" value="Save"/>
                 
             </fieldset>
 

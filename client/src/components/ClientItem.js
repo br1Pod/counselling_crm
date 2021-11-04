@@ -20,10 +20,11 @@ const ClientItem = ({client, removeClient}) => {
     return (
         <>
         <li>
-            <em>Name: </em> {client.first_name} {client.last_name} | 
-            <button onClick={handleChange}>view</button> | 
-            <button onClick={handleDelete}>x</button>
-
+            <a href="" className="person-item, list-object">{client.first_name} {client.last_name}</a>
+            <span className="person-manage">
+            <button className="list-object" onClick={handleChange}>view</button>
+            <button className="list-object" onClick={handleDelete}>x</button>
+            </span>
             {/* <ul className="editable-form">
                 <li><EditClientForm updateClient={updateClient} client={client} /></li>
             </ul> */}
